@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>If you find any kind of problem send message to admin.</h2>
+<form method="POST" action="{% url 'send_message' %}">
+	{% csrf_token %}
+
+	{{ form.as_p }}
+
+    <br/>
+    <button type="submit" class="btn btn-secondary">Send Message</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+</form>
+
+{% endblock content %}
