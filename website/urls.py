@@ -12,3 +12,4 @@ urlpatterns = [
     path('update_record/<int:pk>', views.update_record, name='update_record'),
     path('send_message/', views.send_message, name="send_message"),
 ]
+# hello
